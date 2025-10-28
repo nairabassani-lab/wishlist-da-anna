@@ -3,70 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist de Presentes - Rolagem Vertical</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Wishlist de Presentes - Role e Contribua!</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            /* Adicionado padding-bottom para o botão flutuante não cobrir o conteúdo do rodapé */
+            padding-bottom: 80px; 
+        }
+
+        .wishlist-container {
+            /* Container principal para centralizar o design no desktop */
+            position: relative; 
+            width: 100%;
+            max-width: 550px; /* Largura máxima ideal para rolagem vertical em celular */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white; /* Cor de fundo para preencher laterais caso o design não ocupe 100% da largura */
+        }
+
+        /* Define as proporções do iframe (585.6515% altura para 100% largura) */
+        .canva-design {
+            position: relative; 
+            width: 100%; 
+            height: 0; 
+            /* SEU NOVO PAD: Determina a altura extrema para rolar a página */
+            padding-top: 585.6515%; 
+            padding-bottom: 0; 
+        }
+
+        .canva-design iframe {
+            position: absolute; 
+            width: 100%; 
+            height: 100%; 
+            top: 0; 
+            left: 0; 
+            border: none; 
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* BOTÃO PIX FLUTUANTE (FIXO NA PARTE INFERIOR) */
+        .floating-pix-button {
+            position: fixed; /* Fica fixo na tela */
+            bottom: 0; /* Colado na parte inferior */
+            left: 0;
+            right: 0;
+            z-index: 1000; /* Fica acima de todo o conteúdo */
+            
+            /* Estilos de Botão */
+            background-color: #791e94; /* Roxo do Nubank */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.2s;
+        }
+
+        .floating-pix-button:hover {
+            background-color: #5c1873; /* Roxo mais escuro no hover */
+        }
+
+        /* Estilos responsivos */
+        @media (min-width: 551px) {
+             /* Limita a largura do botão flutuante no desktop para que ele acompanhe a largura do iframe */
+            .floating-pix-button {
+                max-width: 550px; 
+                margin: 0 auto;
+                left: initial;
+                right: initial;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header class="header">
-        <h1>Wishlist do Seminário</h1>
-        <p>Olá! Para este seminário, preciso de alguns itens essenciais. Clique no item que você gostaria de "comprar" e ajude com a contribuição via Pix!</p>
-    </header>
-
-    <main class="wishlist-container">
+    <div class="wishlist-container">
         
-        <div class="product-block">
-            <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" rel="noopener" class="product-link-wrapper">
-                <div class="canva-design">
-                    <iframe loading="lazy" 
-                        src="https://www.canva.com/design/DAG3FNsEYcg/9hhltGROu42sXDBVRvJPsg/view?embed" 
-                        allowfullscreen="allowfullscreen" 
-                        allow="fullscreen">
-                    </iframe>
-                </div>
-                <div class="product-info">
-                    Pijama (Valor sugerido: <span class="value">R$ 69,90</span>)
-                    <span class="call-to-action">Clique para Contribuir via Pix</span>
-                </div>
-            </a>
+        <div class="canva-design">
+            <iframe loading="lazy" 
+                src="https://www.canva.com/design/DAG3GjnIHwA/F1ACzVn6K5azPjyEnprSKA/view?embed" 
+                allowfullscreen="allowfullscreen" 
+                allow="fullscreen">
+            </iframe>
         </div>
-        
-        <div class="product-block">
-            <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" rel="noopener" class="product-link-wrapper">
-                <div class="canva-design">
-                    <iframe loading="lazy" 
-                        src="https://www.canva.com/design/OUTRO_LINK_CANVA_2/view?embed" 
-                        allowfullscreen="allowfullscreen" 
-                        allow="fullscreen">
-                    </iframe>
-                </div>
-                <div class="product-info">
-                    Pijama (Valor sugerido: <span class="value">R$ 79,90</span>)
-                    <span class="call-to-action">Clique para Contribuir via Pix</span>
-                </div>
-            </a>
-        </div>
+    </div>
+    
+    <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" rel="noopener" class="floating-pix-button">
+        QUERO CONTRIBUIR VIA PIX!
+    </a>
 
-        <div class="product-block">
-            <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" rel="noopener" class="product-link-wrapper">
-                <div class="canva-design">
-                    <iframe loading="lazy" 
-                        src="https://www.canva.com/design/OUTRO_LINK_CANVA_3/view?embed" 
-                        allowfullscreen="allowfullscreen" 
-                        allow="fullscreen">
-                    </iframe>
-                </div>
-                <div class="product-info">
-                    Calcinha (Valor sugerido: <span class="value">R$ 15,90</span>)
-                    <span class="call-to-action">Clique para Contribuir via Pix</span>
-                </div>
-            </a>
-        </div>
-        
-        </main>
-
-    <footer style="text-align: center; padding: 20px; font-size: 0.8em; color: #888;">
-        <p>A contribuição é via Pix. Ao clicar, você será redirecionado para o link do Nubank.</p>
-    </footer>
 </body>
 </html>
