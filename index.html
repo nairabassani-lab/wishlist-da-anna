@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist de Presentes - Role e Contribua!</title>
+    <title>Wishlist de Presentes</title>
     
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #f0f0f0; /* Cor de fundo da página */
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Centraliza horizontalmente */
             align-items: flex-start; /* Alinha o conteúdo ao topo para iniciar a rolagem */
-            min-height: 100vh; /* Garante que a rolagem funcione se o conteúdo for menor que a tela */
+            min-height: 100vh; /* Garante que a página tenha pelo menos 100% da altura da tela */
         }
 
         .wishlist-container {
@@ -26,6 +26,7 @@
             border-radius: 10px;
             overflow: hidden;
             background-color: white; 
+            margin-top: 0; /* Começa a partir do topo */
         }
 
         /* Define as proporções do iframe (585.6515% altura para 100% largura) */
@@ -48,17 +49,6 @@
             padding: 0;
             margin: 0;
         }
-
-        /* Rodapé com informação de Pix, agora que o botão flutuante foi removido */
-        footer {
-            margin-top: 20px;
-            padding: 20px;
-            font-size: 0.9em;
-            color: #666;
-            text-align: center;
-            width: 100%;
-            max-width: 550px; /* Para alinhar com o wishlist-container */
-        }
     </style>
 </head>
 <body>
@@ -67,7 +57,6 @@
         
         <div class="canva-design">
             <iframe loading="lazy" 
-                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
                 src="https://www.canva.com/design/DAG3GjnIHwA/DDfyEahQUN4BmpSyLwXwEQ/view?embed" 
                 allowfullscreen="allowfullscreen" 
                 allow="fullscreen">
@@ -75,11 +64,5 @@
         </div>
     </div>
     
-    <footer>
-        <p>Gostou de algo? Você pode contribuir via Pix!</p>
-        <p>Clique <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" rel="noopener" style="color: #791e94; text-decoration: none; font-weight: bold;">AQUI</a> para fazer sua contribuição.</p>
-        <p style="font-size: 0.8em; margin-top: 10px;">Agradeço muito a sua ajuda!</p>
-    </footer>
-
-</body>
+    </body>
 </html>
