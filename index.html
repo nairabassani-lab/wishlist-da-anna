@@ -13,8 +13,8 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            /* Adicionado padding-bottom para o botão flutuante não cobrir o conteúdo do rodapé */
-            padding-bottom: 80px; 
+            align-items: flex-start; /* Alinha o conteúdo ao topo para iniciar a rolagem */
+            min-height: 100vh; /* Garante que a rolagem funcione se o conteúdo for menor que a tela */
         }
 
         .wishlist-container {
@@ -25,7 +25,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
             overflow: hidden;
-            background-color: white; /* Cor de fundo para preencher laterais caso o design não ocupe 100% da largura */
+            background-color: white; 
         }
 
         /* Define as proporções do iframe (585.6515% altura para 100% largura) */
@@ -33,7 +33,7 @@
             position: relative; 
             width: 100%; 
             height: 0; 
-            /* SEU NOVO PAD: Determina a altura extrema para rolar a página */
+            /* VALOR CRÍTICO: Usa a altura longa do seu design do Canva para permitir a rolagem */
             padding-top: 585.6515%; 
             padding-bottom: 0; 
         }
@@ -48,40 +48,16 @@
             padding: 0;
             margin: 0;
         }
-        
-        /* BOTÃO PIX FLUTUANTE (FIXO NA PARTE INFERIOR) */
-        .floating-pix-button {
-            position: fixed; /* Fica fixo na tela */
-            bottom: 0; /* Colado na parte inferior */
-            left: 0;
-            right: 0;
-            z-index: 1000; /* Fica acima de todo o conteúdo */
-            
-            /* Estilos de Botão */
-            background-color: #791e94; /* Roxo do Nubank */
-            color: white;
-            padding: 15px;
+
+        /* Rodapé com informação de Pix, agora que o botão flutuante foi removido */
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #666;
             text-align: center;
-            font-size: 1.2em;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.2s;
-        }
-
-        .floating-pix-button:hover {
-            background-color: #5c1873; /* Roxo mais escuro no hover */
-        }
-
-        /* Estilos responsivos */
-        @media (min-width: 551px) {
-             /* Limita a largura do botão flutuante no desktop para que ele acompanhe a largura do iframe */
-            .floating-pix-button {
-                max-width: 550px; 
-                margin: 0 auto;
-                left: initial;
-                right: initial;
-            }
+            width: 100%;
+            max-width: 550px; /* Para alinhar com o wishlist-container */
         }
     </style>
 </head>
@@ -91,16 +67,19 @@
         
         <div class="canva-design">
             <iframe loading="lazy" 
-                src="https://www.canva.com/design/DAG3GjnIHwA/F1ACzVn6K5azPjyEnprSKA/view?embed" 
+                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                src="https://www.canva.com/design/DAG3GjnIHwA/DDfyEahQUN4BmpSyLwXwEQ/view?embed" 
                 allowfullscreen="allowfullscreen" 
                 allow="fullscreen">
             </iframe>
         </div>
     </div>
     
-    <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" rel="noopener" class="floating-pix-button">
-        QUERO CONTRIBUIR VIA PIX!
-    </a>
+    <footer>
+        <p>Gostou de algo? Você pode contribuir via Pix!</p>
+        <p>Clique <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" rel="noopener" style="color: #791e94; text-decoration: none; font-weight: bold;">AQUI</a> para fazer sua contribuição.</p>
+        <p style="font-size: 0.8em; margin-top: 10px;">Agradeço muito a sua ajuda!</p>
+    </footer>
 
 </body>
 </html>
