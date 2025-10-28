@@ -1,1 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
 
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ff69b4; 
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-container {
+    display: flex;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Centraliza os itens na página */
+    padding: 20px 0;
+}
+
+.product-block {
+    width: 100%;
+    max-width: 450px; /* Largura padrão para itens */
+    margin: 15px 0; /* Espaçamento entre os itens */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-link-wrapper {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.product-link-wrapper:hover {
+    transform: translateY(-3px);
+    opacity: 0.95;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Define as proporções do iframe (4:5, 125% altura para 100% largura) */
+.canva-design {
+    position: relative; 
+    width: 100%; 
+    height: 0; 
+    padding-top: 125.0000%; 
+    padding-bottom: 0; 
+}
+
+.canva-design iframe {
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0; 
+    border: none; 
+    padding: 0;
+    margin: 0;
+    pointer-events: none; /* Garante que o clique seja capturado pelo <a> */
+}
+
+.product-info {
+    text-align: center;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    color: #4a4a4a;
+}
+
+.product-info .value {
+    color: #008000; 
+    font-size: 1.3em;
+    margin-left: 5px;
+}
+
+.call-to-action {
+    display: block;
+    background-color: #791e94; /* Roxo/Nubank */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .product-block {
+        max-width: 95%;
+    }
+}
