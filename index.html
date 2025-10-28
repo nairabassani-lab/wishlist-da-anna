@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist do Seminário - Ajude a Realizar!</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #ff69b4; /* Rosa Choque, cor jovem */
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin-top: 0;
+            font-size: 2.5em;
+        }
+
+        .product-link {
+            display: block; /* Ocupa toda a largura */
+            text-decoration: none;
+            color: inherit;
+            margin: 30px auto;
+            max-width: 450px; /* Limite a largura para ficar parecido com um post */
+            cursor: pointer;
+            position: relative; 
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .product-link:hover {
+            transform: translateY(-5px); /* Efeito de elevação */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0.95; 
+        }
+
+        .product-container {
+            position: relative; 
+            width: 100%; 
+            height: 0; 
+            padding-top: 125.0000%; /* Proporção 4:5 do Canva */
+            padding-bottom: 0; 
+            box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
+            overflow: hidden;
+            border-radius: 8px 8px 0 0; /* Arredonda só o topo */
+            will-change: transform;
+        }
+
+        .product-container iframe {
+            position: absolute; 
+            width: 100%; 
+            height: 100%; 
+            top: 0; 
+            left: 0; 
+            border: none; 
+            padding: 0;
+            margin: 0;
+            /* ESSENCIAL: Permite que o clique passe pelo iframe e ative o link */
+            pointer-events: none; 
+        }
+
+        .product-info {
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 8px 8px; /* Arredonda só a base */
+            color: #4a4a4a;
+        }
+        
+        .product-info .value {
+            color: #008000; /* Verde, para remeter ao Pix/Compra */
+            font-size: 1.3em;
+            margin-left: 5px;
+        }
+
+        .call-to-action {
+            display: block;
+            background-color: #791e94; /* Roxo/Nubank */
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
+        
+        /* Opcional: Para telas menores */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .product-link {
+                max-width: 90%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Wishlist do Seminário</h1>
+        <p>Olá! Para este seminário, preciso de alguns itens essenciais. Clique no item que você gostaria de "comprar" e ajude com a contribuição via Pix!</p>
+    </header>
+
+    <main>
+        
+        <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" class="product-link" target="_blank" rel="noopener">
+            <div class="product-container">
+                <iframe loading="lazy" 
+                    src="https://www.canva.com/design/DAG3FNsEYcg/9hhltGROu42sXDBVRvJPsg/view?embed" 
+                    allowfullscreen="allowfullscreen" 
+                    allow="fullscreen">
+                </iframe>
+            </div>
+            <div class="product-info">
+                Calça Nova (Valor sugerido: <span class="value">R$ 120,00</span>)
+                <span class="call-to-action">Clique para Contribuir via Pix</span>
+            </div>
+        </a>
+
+        <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" class="product-link" target="_blank" rel="noopener">
+            <div class="product-container">
+                <iframe loading="lazy" 
+                    src="https://www.canva.com/design/DAG5FNsEYcg/9hhltGROu42sXDBVRvJPsg/view?embed" 
+                    allowfullscreen="allowfullscreen" 
+                    allow="fullscreen">
+                </iframe>
+            </div>
+            <div class="product-info">
+                Livro de Referência (Valor sugerido: <span class="value">R$ 55,90</span>)
+                <span class="call-to-action">Clique para Contribuir via Pix</span>
+            </div>
+        </a>
+        
+        <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" class="product-link" target="_blank" rel="noopener">
+            <div class="product-container">
+                <iframe loading="lazy" 
+                    src="https://www.canva.com/design/DAG7FNsEYcg/9hhltGROu42sXDBVRvJPsg/view?embed" 
+                    allowfullscreen="allowfullscreen" 
+                    allow="fullscreen">
+                </iframe>
+            </div>
+            <div class="product-info">
+                Tênis Básico (Valor sugerido: <span class="value">R$ 180,00</span>)
+                <span class="call-to-action">Clique para Contribuir via Pix</span>
+            </div>
+        </a>
+
+        </main>
+
+    <footer>
+        <p style="text-align: center; margin-top: 50px; font-size: 0.8em; color: #888;">
+            A contribuição é via Pix. Ao clicar, você será redirecionado para o link do Nubank.
+        </p>
+    </footer>
+</body>
+</html>
