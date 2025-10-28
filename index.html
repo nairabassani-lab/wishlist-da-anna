@@ -3,131 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist de Presentes - Contribua com o Pix</title>
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Ocupa toda a altura da tela */
-            padding-top: 20px; /* Pequeno padding para telas menores */
-            padding-bottom: 50px;
-        }
-
-        .wishlist-container {
-            /* Container principal que envolve o design do Canva e os links */
-            position: relative; 
-            width: 100%;
-            max-width: 550px; /* Largura máxima para visualização de celular/post */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        /* Define as proporções do iframe (4:5, 125% altura para 100% largura) */
-        .canva-design {
-            position: relative; 
-            width: 100%; 
-            height: 0; 
-            padding-top: 125.0000%; 
-            padding-bottom: 0; 
-        }
-
-        .canva-design iframe {
-            position: absolute; 
-            width: 100%; 
-            height: 100%; 
-            top: 0; 
-            left: 0; 
-            border: none; 
-            padding: 0;
-            margin: 0;
-            pointer-events: none; /* Garante que o clique não seja 'roubado' pelo iframe */
-        }
-        
-        /* Estilo dos Hotspots (Links transparentes sobre as caixinhas rosas) */
-        .hotspot-link {
-            position: absolute;
-            background-color: rgba(255, 0, 0, 0); /* Totalmente transparente */
-            z-index: 10; /* Fica acima do iframe */
-            cursor: pointer;
-            /* Deixa a área de clique maior para facilitar */
-            padding: 5px; 
-            margin: -5px; 
-            transition: background-color 0.2s; 
-        }
-
-        .hotspot-link:hover {
-            background-color: rgba(255, 255, 255, 0.2); /* Fica levemente visível ao passar o mouse */
-        }
-
-        /* Estilos responsivos */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-                min-height: initial;
-            }
-        }
-    </style>
+    <title>Wishlist de Presentes - Rolagem Vertical</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="wishlist-container">
+    <header class="header">
+        <h1>Wishlist do Seminário</h1>
+        <p>Olá! Para este seminário, preciso de alguns itens essenciais. Clique no item que você gostaria de "comprar" e ajude com a contribuição via Pix!</p>
+    </header>
+
+    <main class="wishlist-container">
         
-        <div class="canva-design">
-            <iframe loading="lazy" 
-                src="https://www.canva.com/design/DAG3FNsEYcg/9hhltGROu42sXDBVRvJPsg/view?embed" 
-                allowfullscreen="allowfullscreen" 
-                allow="fullscreen">
-            </iframe>
+        <div class="product-block">
+            <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" rel="noopener" class="product-link-wrapper">
+                <div class="canva-design">
+                    <iframe loading="lazy" 
+                        src="https://www.canva.com/design/DAG3FNsEYcg/9hhltGROu42sXDBVRvJPsg/view?embed" 
+                        allowfullscreen="allowfullscreen" 
+                        allow="fullscreen">
+                    </iframe>
+                </div>
+                <div class="product-info">
+                    Pijama (Valor sugerido: <span class="value">R$ 69,90</span>)
+                    <span class="call-to-action">Clique para Contribuir via Pix</span>
+                </div>
+            </a>
+        </div>
+        
+        <div class="product-block">
+            <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" rel="noopener" class="product-link-wrapper">
+                <div class="canva-design">
+                    <iframe loading="lazy" 
+                        src="https://www.canva.com/design/OUTRO_LINK_CANVA_2/view?embed" 
+                        allowfullscreen="allowfullscreen" 
+                        allow="fullscreen">
+                    </iframe>
+                </div>
+                <div class="product-info">
+                    Pijama (Valor sugerido: <span class="value">R$ 79,90</span>)
+                    <span class="call-to-action">Clique para Contribuir via Pix</span>
+                </div>
+            </a>
         </div>
 
-        <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" class="hotspot-link"
-           style="top: 43%; left: 27%; width: 22%; height: 6%;">
-           </a>
-
-        <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" class="hotspot-link"
-           style="top: 43%; left: 43.5%; width: 22%; height: 6%;">
-           </a>
+        <div class="product-block">
+            <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" rel="noopener" class="product-link-wrapper">
+                <div class="canva-design">
+                    <iframe loading="lazy" 
+                        src="https://www.canva.com/design/OUTRO_LINK_CANVA_3/view?embed" 
+                        allowfullscreen="allowfullscreen" 
+                        allow="fullscreen">
+                    </iframe>
+                </div>
+                <div class="product-info">
+                    Calcinha (Valor sugerido: <span class="value">R$ 15,90</span>)
+                    <span class="call-to-action">Clique para Contribuir via Pix</span>
+                </div>
+            </a>
+        </div>
         
-        <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" class="hotspot-link"
-           style="top: 43%; left: 60.5%; width: 22%; height: 6%;">
-           </a>
+        </main>
 
-        <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" class="hotspot-link"
-           style="top: 65.5%; left: 27%; width: 22%; height: 6%;">
-           </a>
-
-        <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" class="hotspot-link"
-           style="top: 65.5%; left: 43.5%; width: 22%; height: 6%;">
-           </a>
-
-        <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" class="hotspot-link"
-           style="top: 65.5%; left: 60.5%; width: 22%; height: 6%;">
-           </a>
-
-        <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" class="hotspot-link"
-           style="top: 88%; left: 27%; width: 22%; height: 6%;">
-           </a>
-
-        <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" class="hotspot-link"
-           style="top: 88%; left: 43.5%; width: 22%; height: 6%;">
-           </a>
-        
-        <a href="https://nubank.com.br/cobrar/ah1a6/68ffe8fa-0624-4a44-a361-be57144cec9a" target="_blank" class="hotspot-link"
-           style="top: 88%; left: 60.5%; width: 22%; height: 6%;">
-           </a>
-
-    </div>
-    
-    <footer style="position: absolute; bottom: 10px; font-size: 0.8em; color: #888; text-align: center; width: 100%;">
-        <p>Ao clicar no valor, você será redirecionado para o link de pagamento Pix (Nubank) para realizar sua contribuição.</p>
+    <footer style="text-align: center; padding: 20px; font-size: 0.8em; color: #888;">
+        <p>A contribuição é via Pix. Ao clicar, você será redirecionado para o link do Nubank.</p>
     </footer>
-
 </body>
 </html>
